@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Restuarant Reservations Page</title>
+    <title>Restaurant Reviews Page</title>
     <style>
       body {
         overflow-x: hidden;
@@ -18,27 +18,28 @@
   <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin"></script>
   <script src="https://unpkg.com/styled-components/dist/styled-components.min.js" crossorigin></script>
-  <script src="https://cf-simple-s3-origin-fec-reservations-983608125475.s3.amazonaws.com/compress/public/main.js.br"></script>
-  <script src="http://54.241.154.11:3001/bundle.js"></script>
-  <script src="http://18.223.151.81:3003/bundle.js"></script>
-  <script src="http://18.219.139.83:3004/index_bundle.js"></script>
+  <!-- <script src="https://cf-simple-s3-origin-fec-reservations-983608125475.s3.amazonaws.com/compress/public/main.js.br"></script> -->
+  <!-- <script src="http://54.241.154.11:3001/bundle.js"></script> -->
+  <script src="http://54.67.95.150:3003/bundle.js"></script>
+  <!-- <script src="http://18.219.139.83:3004/index_bundle.js"></script> -->
   <script>
+    const id = Number(window.location.pathname.match(/[0-9]*$/)[0]);
+    // ReactDOM.render(
+    //   React.createElement(ReservationsModule.default),
+    //   document.getElementById('reservations')
+    //   );
+    // ReactDOM.render(
+    //   React.createElement(BannerGallery.default),
+    //   document.getElementById('bannergallery')
+    //   );
     ReactDOM.render(
-      React.createElement(ReservationsModule.default),
-      document.getElementById('reservations')
+      React.createElement(Reviews.default, {id: id}),
+      document.getElementById('reviews')
       );
-      ReactDOM.render(
-        React.createElement(BannerGallery.default),
-        document.getElementById('bannergallery')
-        );
-        ReactDOM.render(
-          React.createElement(Reviews.default),
-          document.getElementById('reviews')
-          );
-          ReactDOM.render(
-            React.createElement(window.menu),
-            document.getElementById('Menus')
-            );
+    // ReactDOM.render(
+    //   React.createElement(window.menu),
+    //   document.getElementById('Menus')
+    //   );
             </script>
   </body>
 </html>
